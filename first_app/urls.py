@@ -1,6 +1,7 @@
 from django.urls import path
 from first_app import views
 
+#relative urls
 app_name = "first_app"
 
 urlpatterns = [
