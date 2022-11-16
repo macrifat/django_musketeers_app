@@ -6,4 +6,13 @@
 
 <h1>I am Member form and members </h1>
 
+<form action="" method="POST">
+
+    {{ member_form.as_p}}
+    {% csrf_token %}
+
+    <input type="submit" name="submit" value="Add Members">
+
+</form>
+
 {% endblock body_block %}

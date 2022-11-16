@@ -1,0 +1,14 @@
+{% extends 'first_app/base.html' %}
+
+
+{% block body_block %}
+
+<h1> Member info page </h1>
+
+<h3>Members Name : {{member_info.first_name}} {{member_info.last_name}}</h3>
+<h3>Member Email : {{member_info.email}}</h3>
+<h3>Phone Number : {{member_info.phone_number}}</h3>
+
+<a href="{% url 'first_app:member_update' member_id=member_info.id%}" class="btn btn-primary">Update</a>
+<a href="{% url 'first_app:member_delete' member_id=member_info.id%}" class="btn btn-primary">Delete</a>
+{% endblock body_block %}

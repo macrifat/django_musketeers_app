@@ -3,7 +3,15 @@
 
 {% block body_block %}
 
-<h1>I am Homepage </h1>
-<h1> I am in homepage</h1>
+<h1>Musketeers Member List </h1>
+<ul>
+ {% if member_list %}
+ {% for member in member_list %}
+ <li> <a href=" {% url 'first_app:member_info' member_id=member.id %} ">{{ member.first_name}} {{member.last_name}} </li></a>
+ {% endfor %}
+ {% else %}
+ <h1> No members at the moment</h1>
+ {% endif %}
+</ul>
 
 {% endblock body_block %}
